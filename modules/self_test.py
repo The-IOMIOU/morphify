@@ -127,8 +127,13 @@ def run() -> int:
         window = ui.MainWindow(lambda: None, lambda *a, **k: None)
         window._shutting_down = True
         window._ui_timer.stop()
+        # Compared against the nav list rather than a literal, so adding a page
+        # cannot fail this check for the wrong reason. It caught the Motion
+        # page being added -- correctly, but only because the number was stale.
         pages = window._pages.count()
-        check("main window", f"built, {pages} pages", pages == 5)
+        expected = len(ui.NAV_ITEMS)
+        check("main window", f"built, {pages} pages (nav lists {expected})",
+              pages == expected)
     except Exception as exc:
         check("main window", repr(exc), False)
 
