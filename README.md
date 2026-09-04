@@ -20,7 +20,7 @@ Teams, OBS and any browser can select it like an ordinary webcam. It also
 renders a still photo of a person performing motion from a video of you —
 whole body, generated rather than pasted.
 
-Built by **[IOMIOU](https://github.com/IOMIOU)** on top of the open-source
+Built by **[IOMIOU](https://github.com/The-IOMIOU)** on top of the open-source
 [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) face-swap engine.
 
 <p align="center">
